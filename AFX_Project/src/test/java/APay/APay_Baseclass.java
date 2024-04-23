@@ -16,6 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import APay.POM.Apay_Login_POM;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class APay_Baseclass {
@@ -26,6 +27,7 @@ public class APay_Baseclass {
 
 	public WebDriver getDriver() {
 		if (driver == null) {
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}

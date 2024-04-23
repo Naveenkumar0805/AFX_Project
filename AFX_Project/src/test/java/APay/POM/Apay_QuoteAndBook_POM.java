@@ -2,6 +2,7 @@ package APay.POM;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -88,7 +89,11 @@ public class Apay_QuoteAndBook_POM extends APay_Baseclass {
 
 		initializeWait();
 		WebElement submit_Approval = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='btn_Approve_Submit']")));
-		submit_Approval.click();
+		
+		Actions action = new Actions(driver);
+		action.moveToElement(submit_Approval).click().perform();
+		
+		//submit_Approval.click();
 
 	}
 

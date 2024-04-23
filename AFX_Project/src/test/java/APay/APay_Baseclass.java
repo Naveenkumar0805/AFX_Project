@@ -27,7 +27,6 @@ public class APay_Baseclass {
 
 	public WebDriver getDriver() {
 		if (driver == null) {
-			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 		}

@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 
-@CucumberOptions(features = "src/test/resources/FeatureFiles", glue = "APay", dryRun = false, monochrome = true,
+@CucumberOptions(features = "FeatureFiles/APay_Login.feature", glue = "APay", dryRun = false, monochrome = true,
 				plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 				)
 

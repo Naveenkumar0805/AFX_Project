@@ -88,12 +88,11 @@ public class Apay_QuoteAndBook_POM extends APay_Baseclass {
 	public void payment_Approval() {
 
 		initializeWait();
-		WebElement submit_Approval = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='btn_Approve_Submit']")));
+		WebElement submit_Approval = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='btnSubmit_Release']")));
 		
 		Actions action = new Actions(driver);
 		action.moveToElement(submit_Approval).click().perform();
 		
-		//submit_Approval.click();
 
 	}
 

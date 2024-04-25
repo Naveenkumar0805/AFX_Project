@@ -16,6 +16,8 @@ public class APay_Dashboard_POM extends APay_Baseclass {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[@src=' https://apaystaging.ascendant.world//DashBoard']")));
 		
 		WebElement send_payments = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='btnAddPayment']")));
+		String text = send_payments.getText();
+		System.out.println(text);
 		send_payments.click();
 		
 		driver.switchTo().defaultContent();
@@ -63,9 +65,6 @@ public class APay_Dashboard_POM extends APay_Baseclass {
                 break;
             }
         }
-
-        // Print the total number of rows
-        System.out.println("Total number of rows: " + totalRowCount);
 
 //        // Close the browser
 //        driver.quit();

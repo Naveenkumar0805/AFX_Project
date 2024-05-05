@@ -1,7 +1,7 @@
 package APay.POM;
 
 import org.openqa.selenium.By;
-
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,6 +9,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import APay.APay_Baseclass;
 
 public class APay_Dashboard_POM extends APay_Baseclass {
+	
+	public WebDriver driver;
+	 
+    public APay_Dashboard_POM() {
+        this.driver = APay_Baseclass.getDriver();
+    }
+
 	
 	public void dashboard_saved() {
 		

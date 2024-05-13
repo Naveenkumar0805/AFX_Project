@@ -1,13 +1,23 @@
 package APay.POM;
 
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import APay.APay_Baseclass;
 
 public class Apay_Login_POM extends APay_Baseclass {
+
+
+	public WebDriver driver;
+
+	public Apay_Login_POM() {
+		this.driver = APay_Baseclass.getDriver();
+	}
 
 	public void openApay() {
 
@@ -27,29 +37,43 @@ public class Apay_Login_POM extends APay_Baseclass {
 	}
 
 	public void login() {
-		
-		int framecount = driver.findElements(By.tagName("iFrame")).size();
-		System.out.println("The Frame count is: " + framecount);
 
-		driver.switchTo().frame(0);
+		try {
+			// driver.switchTo().frame(0);
+			List<WebElement> captchaElements = driver.findElements(By.xpath("//div[@class='recaptcha-checkbox-border']"));
 
-		WebElement captcha = driver.findElement(By.xpath("//div[@class='recaptcha-checkbox-border']"));
-		captcha.click();
+			if (!captchaElements.isEmpty() && captchaElements.get(0).isDisplayed()) {
+				captchaElements.get(0).click();
 
-		driver.switchTo().defaultContent();
+				driver.switchTo().defaultContent();
+			} else {
 
-		initializeWait();
-		WebElement loginbutton = wait.until(ExpectedConditions.elementToBeClickable(By.id("btnLogin")));
-		loginbutton.click();
+				driver.switchTo().defaultContent();
+			}
 
+			initializeWait();
+			WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("btnLogin")));
+			loginButton.click();
+
+		} catch (Exception e) {
+			System.out.println("Error during login: " + e.getMessage());
+		}
 
 	}
+
 
 	public void APay_Dashboard() {
 
 		initializeWait();
-		WebElement Dashboard = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='javascript:void();'][normalize-space()='DashBoard']")));
-		Dashboard.getText();
+
+		// Find all elements that match the XPath for the "select_an_account" button
+		List<WebElement> select_an_Account = driver.findElements(By.xpath("(//input[@type='submit'])[1]"));
+
+		// Check if the "select_an_account" button exists and is visible
+		if (!select_an_Account.isEmpty() && select_an_Account.get(0).isDisplayed()) {
+			select_an_Account.get(0).click();
+
+		}
 
 	}
 

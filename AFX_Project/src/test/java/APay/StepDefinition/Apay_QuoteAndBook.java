@@ -55,7 +55,6 @@ public class Apay_QuoteAndBook extends APay_Baseclass {
 
 		QuoteAndBook.payment_Approval();
 		
-		driver.quit();
 
 	}
 

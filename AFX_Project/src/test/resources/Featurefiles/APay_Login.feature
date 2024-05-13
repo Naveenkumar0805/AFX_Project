@@ -15,14 +15,3 @@ Then the the user click on the get quote button and click on accept
 When The user click on payee name and select the payee from the dropdown
 And the user adds the payment reference, internal reference and click on add payments button
 Then the payment is once added and click on submit for approval button
-
-@Dashboard_saved_sendpayments_count
-Scenario: count the number of saved deals in dashboard
-When click on the send payments option under saved deals
-And it should navigate to the send payments page and need to count the deals under the page
-
-@Dashboard_saved_sendpayments
-Scenario: To approve the send payments deal under saved deals menu
-When the user click on the send payments option under saved deals
-And it should navigates to send payments page and the user clicks on action dropdown button and choose open option
-Then it navigates to the send payments deal approval page and click on get quote button and click on submit for approval

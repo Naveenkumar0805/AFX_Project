@@ -17,7 +17,12 @@ When the user click on the send payments option under saved deals
 And it should navigates to send payments page and the user clicks on action dropdown button and choose open option
 Then it navigates to the send payments deal approval page and click on get quote button and click on submit for approval
 
+@Dashboard_saved_Receivepayments
+Scenario: count the number of receive payment deals and approve it under saved deals in dashboard
+When the user click on the receive payments option under saved deals
+And it should navigates to receive payments page and the user clicks on action dropdown button and choose open option
 
-Scenario: count the number of receive payment deals under saved deals in dashboard
-When click on receive payments option under saved deals
-And it should navigate to the receive payments page and need to count the deals under the page
+@Dashboard_saved_QuoteAndBook
+Scenario: count the number of quote and book deals and approve it under saved deals in dashboard
+When the user click on the quote and book option under saved deals
+And it should navigates to quote and book page and the user clicks on action dropdown button and choose open option

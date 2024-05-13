@@ -54,7 +54,7 @@ public class Apay_DashboardSaved_SP_POM extends APay_Baseclass {
 		Actions action = new Actions(driver);
 		action.moveToElement(getquote).click().perform();
 						
-		WebElement submit_for_approval = driver.findElement(By.xpath("//input[@id='btn_Accept_Approve_Release']"));
+		WebElement submit_for_approval = driver.findElement(By.xpath("//input[@id='btn_Accept_Approve']"));
 		submit_for_approval.click();
 	}
 

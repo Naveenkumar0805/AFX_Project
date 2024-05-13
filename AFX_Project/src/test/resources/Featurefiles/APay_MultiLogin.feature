@@ -7,6 +7,7 @@ When user enters the "<customerID>", "<username>" and "<password>"
 And user click on the captcha box and click on login button
 Then user should be navigated to the Apay dashboard page
 
+
 When click on the send payments option under saved deals
 And it should navigate to the send payments page and need to count the deals under the page
 

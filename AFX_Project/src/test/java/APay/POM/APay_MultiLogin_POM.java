@@ -70,22 +70,9 @@ public class APay_MultiLogin_POM extends APay_Baseclass {
 		// Check if the "select_an_account" button exists and is visible
 		if (!select_an_Account.isEmpty() && select_an_Account.get(0).isDisplayed()) {
 			select_an_Account.get(0).click();
-
-			implicitwait();
 		} 
 
-		// Always attempt to find and click the "Dashboard" link regardless of the previous result
-		List<WebElement> dashboard = driver.findElements(By.xpath("//a[@href='javascript:void();'][normalize-space()='DashBoard']"));
-		if (!dashboard.isEmpty()) {
-			dashboard.get(0).click();
-		} 
-
-		WebElement Dashboard_title = driver.findElement(By.xpath("//span[@class='tabs-title tabs-closable']"));
-		String Title = Dashboard_title.getText();
-		System.out.println("The Title of the page is: "+Title);
 	}
-
-
 
 }
 

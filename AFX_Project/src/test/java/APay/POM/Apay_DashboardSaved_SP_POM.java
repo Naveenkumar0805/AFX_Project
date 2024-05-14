@@ -1,7 +1,6 @@
 package APay.POM;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,14 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import APay.APay_Baseclass;
 
 public class Apay_DashboardSaved_SP_POM extends APay_Baseclass {
-	
-	
-	public WebDriver driver;
-	 
-    public Apay_DashboardSaved_SP_POM() {
-        this.driver = APay_Baseclass.getDriver();
-    }
-
 	
 	public void dashboard_saved() {
 		
@@ -54,7 +45,7 @@ public class Apay_DashboardSaved_SP_POM extends APay_Baseclass {
 		Actions action = new Actions(driver);
 		action.moveToElement(getquote).click().perform();
 						
-		WebElement submit_for_approval = driver.findElement(By.xpath("//input[@id='btn_Accept_Approve']"));
+		WebElement submit_for_approval = driver.findElement(By.xpath("//input[@id='btn_Accept_Approve_Release']"));
 		submit_for_approval.click();
 	}
 

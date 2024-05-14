@@ -16,6 +16,12 @@ public class Apay_Login_SD extends APay_Baseclass {
 		getDriver();
 		loginpage.openApay();
 	}
+
+//	@When("the user enters the {string}, {string} and {string}")
+//	public void the_user_enters_the_and(String string, String string2, String string3) {
+//	    loginpage.entercredentials(string, string2, string3);
+//	}
+
 	
 	@When("the user enters the customer ID, username and password")
 	public void the_user_enters_the_customer_id_username_and_password() {

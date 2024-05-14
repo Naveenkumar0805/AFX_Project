@@ -15,3 +15,5 @@ Then the the user click on the get quote button and click on accept
 When The user click on payee name and select the payee from the dropdown
 And the user adds the payment reference, internal reference and click on add payments button
 Then the payment is once added and click on submit for approval button
+
+

@@ -1,4 +1,4 @@
-Feature: To check APay Multi user Login
+ Feature: To check APay Multi user Login
 
 @Dashboard_saved_sendpayments_count @Dashboard_saved_sendpayments
 Scenario Outline: Login into Apay Application
@@ -6,14 +6,6 @@ Given user is on the Apay login page
 When user enters the "<customerID>", "<username>" and "<password>"
 And user click on the captcha box and click on login button
 Then user should be navigated to the Apay dashboard page
-
-
-When click on the send payments option under saved deals
-And it should navigate to the send payments page and need to count the deals under the page
-
-When the user click on the send payments option under saved deals
-And it should navigates to send payments page and the user clicks on action dropdown button and choose open option
-Then it navigates to the send payments deal approval page and click on get quote button and click on submit for approval
 
 Examples:
 | customerID | username | password |

@@ -71,6 +71,10 @@ public class APay_MultiLogin_POM extends APay_Baseclass {
 		if (!select_an_Account.isEmpty() && select_an_Account.get(0).isDisplayed()) {
 			select_an_Account.get(0).click();
 		} 
+		
+		initializeWait();
+		WebElement Dashboard = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='javascript:void();'][normalize-space()='DashBoard']")));
+		Dashboard.getText();
 
 	}
 

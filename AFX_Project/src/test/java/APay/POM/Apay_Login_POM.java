@@ -75,8 +75,11 @@ public class Apay_Login_POM extends APay_Baseclass {
 
 		}
 		
-		System.out.println("The login was successful");
+		initializeWait();
+		WebElement Dashboard = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='javascript:void();'][normalize-space()='DashBoard']")));
+		Dashboard.getText();
+
 
 	}
-
+	
 }

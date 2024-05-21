@@ -13,12 +13,12 @@ import io.cucumber.testng.CucumberOptions;
 
 public class Apay_Runner extends AbstractTestNGCucumberTests {
 
-//    @Override
-//    @DataProvider(parallel = true)
-//    public Object[][] scenarios() {
-//        return super.scenarios();
-//        
-//    }
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+        
+    }
     
     
 }
